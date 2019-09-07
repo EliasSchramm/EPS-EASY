@@ -1,0 +1,156 @@
+package enties;
+
+import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+
+import core.HandlerExtention;
+import easy.FormDrawer;
+import easy.GUI;
+import easy.Window;
+import levelDrawer.LevelDrawer;
+import levelLoader.Hitbox;
+import levelLoader.Level;
+import levelLoader.Row;
+
+public class player {
+
+	private float SPEED = 1.5f;
+	private float FALLSEPED = 1.5f;
+
+	private float downforce = 2;
+
+	private float currentSpeed = 0;
+
+	public static boolean test = false;
+
+	private float posX = 0;
+	private float posY = 600;
+
+	
+	private boolean goLeft = false;
+	
+	
+	private int t = 0;
+
+	private boolean isIntersect(float Ax, float Ay, float Aw, float Ah, float Bx, float By, float Bw, float Bh) {
+		return Bx + Bw > Ax && By + Bh > Ay && Ax + Aw > Bx && Ay + Ah > By;
+	}
+
+	public boolean isPlayerColoiding(Level level, int x, int y) {
+
+		level.BuildHitboxes(64, this);
+
+		Rectangle player = new Rectangle();
+		player.setBounds((64 * 9) + x, 64 * 4 - y, 64, 64);
+
+		for (Rectangle h : level.getHitboxes()) {
+			if (player.intersects(h)) {
+				
+				test = true;
+				return true;
+			}
+		}
+
+		test = false;
+
+		return false;
+
+	}
+
+	public player() {
+		GUI.setHandlerExtention(new HandlerExtention() {
+
+			@Override
+			public void extend(KeyEvent e, String t) {
+
+				if (t == "press") {
+
+					if (e.getKeyCode() == KeyEvent.VK_A) {
+						setCurrentSpeed(getSPEED());
+
+					} else if (e.getKeyCode() == KeyEvent.VK_D) {
+						setCurrentSpeed(-getSPEED());
+					} else {
+
+					}
+
+				} else {
+					if (e.getKeyCode() == KeyEvent.VK_A && currentSpeed == SPEED) {
+						setCurrentSpeed(0);
+					} else if (e.getKeyCode() == KeyEvent.VK_D && currentSpeed == -SPEED) {
+						setCurrentSpeed(0);
+					}
+				}
+
+			}
+		});
+	}
+
+	public void updateControls() {
+
+		float delta = Window.getDelta();
+
+		float distance = currentSpeed * delta;
+		float downDistance = downforce / delta;
+		
+		this.posX += distance;
+		
+		if (isPlayerColoiding(LevelDrawer.aktLevel,0, 0)) {
+			if(goLeft) {
+				this.posX -= SPEED * 2;
+			}else {
+				this.posY += SPEED * 2;
+			}
+		}
+				
+		this.posY -= downDistance;
+		
+		if(isPlayerColoiding(LevelDrawer.aktLevel, 0, 0)) {
+			if(downforce > 0) {
+				this.posY += FALLSEPED * 2;
+			}else {
+				this.posY -= FALLSEPED * 2;
+			}
+		}
+
+		
+		
+
+		
+
+	}
+
+	public float getSPEED() {
+		return SPEED;
+	}
+
+	public void setSPEED(float sPEED) {
+		SPEED = sPEED;
+	}
+
+	public float getCurrentSpeed() {
+		return currentSpeed;
+	}
+
+	public void setCurrentSpeed(float currentSpeed) {
+		this.currentSpeed = currentSpeed;
+	}
+
+	public float getPosX() {
+		return posX;
+	}
+
+	public void setPosX(float posX) {
+		this.posX = posX;
+	}
+
+	public float getPosY() {
+		return posY;
+	}
+
+	public void setPosY(float posY) {
+		this.posY = posY;
+	}
+
+}
