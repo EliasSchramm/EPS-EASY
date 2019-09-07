@@ -8,7 +8,7 @@ EPS-EASY is a Java-Libary based on JavaAWT. I write this to take the time, that 
 You dont trust me?
 With this few lines:
 
-```
+```java
   Form main = new Form("main");
   Text sampletext = new Text("sampletext");
 
