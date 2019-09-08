@@ -68,6 +68,11 @@ You can add any object by `add(object)`
 |getImage()|`List<Image>`|Returns a list of all Images in the form.|
 |getText()|`List<Text>`|Returns a list of all Text in the form.|
 
+#### Change forms
+
+To change between forms use:
+``setAKT_FORM_ID(String aKT_FORM_ID)``
+
 ### Text
 
 A simple oneliner text
