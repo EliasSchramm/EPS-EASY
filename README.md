@@ -23,3 +23,24 @@ With this few lines:
 ...You will get this resulut:
 
 ![Sample](https://i.imgur.com/iK7L38x.png)
+
+## Usage
+
+All GUI elements must be placed on a `Form` and this Form needs to get initalized to the `window`.
+Example for a blank window:
+
+```java
+  Form main = new Form("main");
+  Window.addForm(main);
+  EPS.start();
+```
+
+The window pops up with the command `EPS.start()`
+
+Any object needs a ID in its constructor.
+
+## Content
+
+### Forms
+
+Forms are the base of all GUI elements in EPS-EASY
