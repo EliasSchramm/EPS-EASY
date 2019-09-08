@@ -44,3 +44,17 @@ Any object needs a ID in its constructor. With that you can get the object later
 ### Forms
 
 Forms are the base of all GUI elements in EPS-EASY
+
+##### Constructor
+
+`Form form = new Form(String ID);`
+
+##### Add objects
+
+You can add any object by `add(object)`
+
+#### Important methods
+
+|Method|Resulut|Description|
+|------|-------|----------|
+|Hi|whats|up|
