@@ -109,5 +109,8 @@ A simple multilined text within bounds
 |setHasBorder(boolean hasBorder)|-|Set `true` if it should get an border. (default: `true`)
 |setBorderColor(Color borderColor)|-|Set the bordercolor.|
 |setBackgroundColor(Color backgroundColor)|-|Set the backgroundcolor|
-
+|setTextSize(int textSize)|-|Set the textsize|
+|setTextColor(Color textColor)|-|Set the textcolor|
+|setText(String text)|-|Set the displayed text|
+|setFontFamily(String fontFamily)|-|Set the fontfamily|
 
