@@ -35,9 +35,9 @@ Example for a blank window:
   EPS.start();
 ```
 
-The window pops up with the command `EPS.start()`
+The window pops up with the command `EPS.start()`.
 
-Any object needs a ID in its constructor.
+Any object needs a ID in its constructor. With that you can get the object later just by ID. 
 
 ## Content
 
