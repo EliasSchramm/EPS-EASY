@@ -70,6 +70,8 @@ You can add any object by `add(object)`
 
 ### Text
 
+A simple oneliner text
+
 #### Constructor
 
 `Text text = new Text(String ID);`
@@ -85,3 +87,22 @@ You can add any object by `add(object)`
 |setTextColor(Color textColor)|-|Set the textcolor|
 |setText(String text)|-|Set the text|
 |setFontFamily(String fontFamily)|-|Set the fontFamily|
+
+### TextField
+
+A simple multilined text within bounds
+
+#### Constructor
+
+`TextField textField = new TextField(String ID)`
+
+#### Importand methods
+
+|Method|Resulut|Description|
+|------|-------|----------|
+|setPos(int x, int y)|-|Set the x/y position|
+|setCanScroll(boolean canScroll)|-|Set `true` if it should get effected by scrolling. (default: `false`)|
+|setActive(boolean active)|-|Set `true` if it sould be visible. (default: `true`)|
+|setMaxWidth(int maxWidth)|-|Set the maxWidth (default: `500`)|
+|setBordersize(int bordersize)|-|Set the bordersize (default: `4`)|
+|setHasBackground(boolean hasBackground)|-|Set `true` if it should get an extra background|
