@@ -62,5 +62,9 @@ You can add any object by `add(object)`
 |add(object)|-|Add one of the folowing objects to the form: Text, InputField, Button, TextField, Image|
 |setBackground_Image(Image img)|-|Set a image as background. Instead of a image you can also use a `String path`|
 |setBackground_Color(Color background_Color)|-|Set the backgroundcolor. Only will show if there isnt a background image set| 
-
+|getInputField()|`List<InputField>`|Returns a list of all Inputfields in the form.|
+|getTextField()|`List<TextField>`|Returns a list of all Textfields in the form.|
+|getButton()|`List<Button>`|Returns a list of all Buttons in the form.|
+|getImage()|`List<Image>`|Returns a list of all Images in the form.|
+|getText()|`List<Text>`|Returns a list of all Text in the form.|
 
