@@ -81,4 +81,7 @@ You can add any object by `add(object)`
 |setCanScroll(boolean canScroll)|-|Set `true` if it should get effected by scrolling. (default: `false`)|
 |setActive(boolean active)|-|Set `true` if it sould be visible. (default: `true`)|
 |setPos(int x, int y)|-|Set the x/y position.|
-
+|setTextSize(int textSize)|-|Set the textsize|
+|setTextColor(Color textColor)|-|Set the textcolor|
+|setText(String text)|-|Set the text|
+|setFontFamily(String fontFamily)|-|Set the fontFamily|
