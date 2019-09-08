@@ -56,7 +56,7 @@ You can add any object by `add(object)`
 #### Important methods
 
 |Method|Resulut|Description|
-|------|-------|----------|
+|--------|-----|----------|
 |setScrollMultiplyer(int mult)|-|Set the scroll multiplyer|
 |setMaxScroll(int max)|-|Set the max scroll height (in pixel)|
 |add(object)|-|Add one of the folowing objects to the form: Text, InputField, Button, TextField, Image|
