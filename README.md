@@ -107,4 +107,7 @@ A simple multilined text within bounds
 |setBordersize(int bordersize)|-|Set the bordersize (default: `4`)|
 |setHasBackground(boolean hasBackground)|-|Set `true` if it should get an extra background (default: `false`)|
 |setHasBorder(boolean hasBorder)|-|Set `true` if it should get an border. (default: `true`)
+|setBorderColor(Color borderColor)|-|Set the bordercolor.|
+|setBackgroundColor(Color backgroundColor)|-|Set the backgroundcolor|
+
 
