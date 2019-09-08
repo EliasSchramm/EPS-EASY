@@ -68,3 +68,17 @@ You can add any object by `add(object)`
 |getImage()|`List<Image>`|Returns a list of all Images in the form.|
 |getText()|`List<Text>`|Returns a list of all Text in the form.|
 
+### Text
+
+#### Constructor
+
+`Text text = new Text(String ID);`
+
+#### Important methods
+
+|Method|Resulut|Description|
+|--------|-----|----------|
+|setCanScroll(boolean canScroll)|-|Set `true` if it should get effected by scrolling. (default: `false`)|
+|setActive(boolean active)|-|Set `true` if it sould be visible. (default: `true`)|
+|setPos(int x, int y)|-|Set the x/y position.|
+
