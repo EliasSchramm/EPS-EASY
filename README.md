@@ -60,4 +60,7 @@ You can add any object by `add(object)`
 |setScrollMultiplyer(int mult)|-|Set the scroll multiplyer|
 |setMaxScroll(int max)|-|Set the max scroll height (in pixel)|
 |add(object)|-|Add one of the folowing objects to the form: Text, InputField, Button, TextField, Image|
+|setBackground_Image(Image img)|-|Set a image as background. Instead of a image you can also use a `String path`|
+|setBackground_Color(Color background_Color)|-|Set the backgroundcolor. Only will show if there isnt a background image set| 
+
 
