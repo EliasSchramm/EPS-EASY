@@ -71,7 +71,7 @@ You can add any object by `add(object)`
 #### Change forms
 
 To change between forms use:
-``setAKT_FORM_ID(String aKT_FORM_ID)``
+``Window.setAKT_FORM_ID(String aKT_FORM_ID)``java
 
 ### Text
 
