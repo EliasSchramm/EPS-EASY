@@ -150,6 +150,12 @@ samplebutton2.setOnClick(new ChangeForm("formID"));
 |Method|Resulut|Description|
 |------|-------|----------|
 |setNotActive(`Color color_notActive` OR `Image image`)|-|Set the color/image that shows when the button is set to "non active"|
+|setStateNormal(`String PATH` OR `Color color`)|-|Set the color/image that shows when the button is in active state|
+|setStateHover(`String PATH` OR `Color color`)|-|Set the color/image that shows when the button is in hover state|
+|setStatePressed(`String PATH` OR `Color color`)|-|Set the color/image that shows when the button is in pressed state|
+|setPos(int X, int Y)|-|Set the X/Y position|
+|setOnClick(OnClick onClick)|-|Set the onclick interface|
+|setOnHover(OnHover onHover)|-|Set the onhover interface|
 
 
 
