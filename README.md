@@ -140,7 +140,17 @@ samplebutton1.setOnClick(new OnClick() {
 ```
   Change form on click
 ```java
-  samplebutton2.setPos(300, 500);
-  samplebutton2.setText("Change form");
-  samplebutton2.setOnClick(new ChangeForm("formID"));
+samplebutton2.setPos(300, 500);
+samplebutton2.setText("Change form");
+samplebutton2.setOnClick(new ChangeForm("formID"));
 ```
+
+### Importand methods
+
+|Method|Resulut|Description|
+|------|-------|----------|
+|setNotActive(`Color color_notActive` OR `Image image`)|-|Set the color/image that shows when the button is set to "non active"|
+
+
+
+
