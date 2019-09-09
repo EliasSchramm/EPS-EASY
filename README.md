@@ -119,3 +119,28 @@ A simple multilined text within bounds
 |setText(String text)|-|Set the displayed text|
 |setFontFamily(String fontFamily)|-|Set the fontfamily|
 
+### Button
+
+#### Examples
+
+   Say "Hi!" on click
+```java
+samplebutton1.setPos(300, 300);
+samplebutton1.setText("Click me!");
+samplebutton1.setOnClick(new OnClick() {
+
+  @Override
+  public void OnClick() {
+
+  System.out.println("Hi!");
+
+  }
+
+});
+```
+  Change form on click
+```java
+  samplebutton2.setPos(300, 500);
+  samplebutton2.setText("Change form");
+  samplebutton2.setOnClick(new ChangeForm("formID"));
+```
