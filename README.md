@@ -156,6 +156,8 @@ samplebutton2.setOnClick(new ChangeForm("formID"));
 |setPos(int X, int Y)|-|Set the X/Y position|
 |setOnClick(OnClick onClick)|-|Set the onclick interface|
 |setOnHover(OnHover onHover)|-|Set the onhover interface|
+|setHeight(int height)|-|Set the button height|
+|setWidth(int width)|-|Set the button width|
 
 
 
