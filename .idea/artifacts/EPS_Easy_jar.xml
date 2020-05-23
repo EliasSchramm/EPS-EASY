@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="EPS-Easy:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/EPS_Easy_jar</output-path>
+    <root id="archive" name="EPS-Easy.jar">
+      <element id="module-output" name="EPS-Easy" />
+    </root>
+  </artifact>
+</component>

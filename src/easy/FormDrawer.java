@@ -61,12 +61,6 @@ public class FormDrawer extends JLabel {
 		
 		
 		
-		
-		
-		
-		
-		
-		
 		repaint();
 
 	}
