@@ -1,17 +1,7 @@
 package easy;
 
-import java.awt.Color;
-import java.awt.Font;
-
-
 import javax.swing.JFrame;
-
-import button_scripts.ChangeForm;
-import button_scripts.OnClickExit;
 import core.HandlerExtention;
-import core.InputTypes;
-
-
 import java.awt.GraphicsEnvironment;
 import java.awt.event.KeyListener;
 import java.awt.GraphicsDevice; 
@@ -59,14 +49,6 @@ public class GUI {
 		Window.jf1.addMouseListener(new Handler());
 		Window.jf1.addMouseMotionListener(new Handler());
 		Window.jf1.addMouseWheelListener(new Handler());
-		
-		
-		
-	//device.setFullScreenWindow(Window.jf1);
-		
-		
-		
-		
 		
 		FormDrawer draw1 = new FormDrawer();
 		draw1.setBounds(0, 0, Window.getWINDOW_X(), Window.getWINDOW_Y());
