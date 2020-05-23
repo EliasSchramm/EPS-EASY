@@ -10,7 +10,7 @@ import button_scripts.ChangeForm;
 import button_scripts.OnClickExit;
 import core.HandlerExtention;
 import core.InputTypes;
-import var.VAR;
+
 
 import java.awt.GraphicsEnvironment;
 import java.awt.event.KeyListener;
@@ -49,7 +49,7 @@ public class GUI {
 		
 		Window.jf1 = new JFrame();
 		Window.jf1.setSize(Window.getWINDOW_X(), Window.getWINDOW_Y());
-		Window.jf1.setTitle(VAR.getWINDOW_TITEL());
+		Window.jf1.setTitle(Window.getWINDOW_TITEL());
 		Window.jf1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Window.jf1.setLayout(null);
 		Window.jf1.setResizable(false);
@@ -69,7 +69,7 @@ public class GUI {
 		
 		
 		FormDrawer draw1 = new FormDrawer();
-		draw1.setBounds(0, 0, VAR.getWINDOW_X(), VAR.getWINDOW_Y());
+		draw1.setBounds(0, 0, Window.getWINDOW_X(), Window.getWINDOW_Y());
 		draw1.setVisible(true);
 		Window.jf1.add(draw1);
 		
