@@ -1,5 +1,8 @@
 package easy;
 
+import java.awt.*;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
@@ -7,6 +10,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,13 +42,13 @@ public class Handler implements KeyListener, MouseListener, MouseWheelListener, 
 								i++;
 							}
 
-							String sss = "";
+							StringBuilder sss = new StringBuilder();
 							for (String ss : tmp) {
 								if (ss != null) {
-									sss += ss;
+									sss.append(ss);
 								}
 							}
-							iF.setText(sss);
+							iF.setText(sss.toString());
 						}
 
 					} else {
@@ -112,9 +116,35 @@ public class Handler implements KeyListener, MouseListener, MouseWheelListener, 
 
 	}
 
+	public void inputfield_paste(){
+		List<InputField> list = Window.getFormByID(Window.getAKT_FORM_ID()).getInputField();
+		for(InputField i : list){
+			if(i.isActive()){
+				String data = null;
+				try {
+					data = (String) Toolkit.getDefaultToolkit()
+							.getSystemClipboard().getData(DataFlavor.stringFlavor);
+				} catch (UnsupportedFlavorException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+				//i.setText(i.getText()+data);
+			}
+		}
+	}
+
 	public void keyTyped(KeyEvent e) {
 
-		checkInputfieldInput(e.getKeyChar(), KeyEvent.getExtendedKeyCodeForChar(e.getKeyChar()));
+		if((e.getKeyCode() == KeyEvent.VK_V) && ((e.getModifiers() & KeyEvent.CTRL_MASK) != 0)){
+			//inputfield_paste();
+			System.out.println("lol");
+		}else{
+			checkInputfieldInput(e.getKeyChar(), KeyEvent.getExtendedKeyCodeForChar(e.getKeyChar()));
+		}
+
+
 
 	}
 

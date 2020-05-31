@@ -101,7 +101,7 @@ A simple multilined text within bounds
 
 `TextField textField = new TextField(String ID)`
 
-#### Importand methods
+#### Important methods
 
 |Method|Resulut|Description|
 |------|-------|----------|
@@ -145,7 +145,7 @@ samplebutton2.setText("Change form");
 samplebutton2.setOnClick(new ChangeForm("formID"));
 ```
 
-### Importand methods
+### Important methods
 
 |Method|Resulut|Description|
 |------|-------|----------|
@@ -158,6 +158,8 @@ samplebutton2.setOnClick(new ChangeForm("formID"));
 |setOnHover(OnHover onHover)|-|Set the onhover interface|
 |setHeight(int height)|-|Set the button height|
 |setWidth(int width)|-|Set the button width|
+
+With time, I am gonna add all elements in the API to this list.
 
 
 

@@ -1,23 +1,20 @@
 package main;
 
-import easy.Button;
-import easy.OnClick;
+import core.InputTypes;
+import easy.*;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 
 import core.EPS;
 import core.RenderExtention;
-import easy.Form;
-import easy.FormDrawer;
-import easy.Image;
-import easy.Window;
 
 
 public class EPS_Main {
 
 	static Form main = new Form("Main");
 	static Button b = new Button("b");
+	static InputField i = new InputField("i");
 	//static Image i = new Image("res/i.png", "i");
 
 	public static void main(String[] args) {
@@ -30,6 +27,10 @@ public class EPS_Main {
 		//main.add(i);
 		
 		Window.addForm(main);
+
+		i.setType(InputTypes.TEXT);
+		i.setPos(200,200);
+
 		b.setText("Haööps");
 		b.setPos(200, 200);
 		b.setOnClick(new OnClick() {
@@ -43,8 +44,8 @@ public class EPS_Main {
 		});
 		b.setCanScroll(true);
 		main.add(b);
-		
-		FormDrawer.renEx = new RenderExtention() {
+		main.add(i);
+		/*FormDrawer.renEx = new RenderExtention() {
 			
 			@Override
 			public void render(Graphics2D g2) {
@@ -52,7 +53,7 @@ public class EPS_Main {
 				g2.fillRect(0, 0, 1000, 1000);
 				
 			}
-		};
+		};*/
 		
 		EPS.start();
 		
