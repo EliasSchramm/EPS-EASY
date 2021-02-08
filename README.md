@@ -20,7 +20,7 @@ With this few lines:
 
   EPS.start();
 ```
-...You will get this resulut:
+...You will get this result:
 
 ![Sample](https://i.imgur.com/iK7L38x.png)
 
